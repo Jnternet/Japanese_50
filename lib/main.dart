@@ -112,6 +112,8 @@ class _MyAppState extends State<MyApp> {
         c = splitJapChar(japChar: charIter.current);
       } else {
         charIter = charVec().iterator;
+        charIter.moveNext();
+        c = splitJapChar(japChar: charIter.current);
         if (kDebugMode) {
           print('已完成一轮');
         }
